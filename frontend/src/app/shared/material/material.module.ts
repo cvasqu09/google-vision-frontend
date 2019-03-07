@@ -5,7 +5,6 @@ import {
   MatInputModule,
   MatFormFieldModule,
   MatCardModule,
-  MatToolbar,
   MatToolbarModule,
   MatListModule,
   MatDividerModule,
