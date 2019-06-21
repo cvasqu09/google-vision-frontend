@@ -19,7 +19,7 @@ export class NotificationBarComponent implements OnInit {
 
   openNotification(message: string) {
     this.notificationBar.open(message, 'Close', {
-      duration: 2000
+      duration: 3000
     });
   }
 

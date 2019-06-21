@@ -15,6 +15,7 @@ export class AuthService {
   login(email: string, password: string) {
     this.fireAuth.auth.signInWithEmailAndPassword(email, password)
       .then(() => {
+        this.notificationService.notify('Successfully logged in');
         this.router.navigate(['/home']);
       })
       .catch((err) => {
@@ -31,12 +32,7 @@ export class AuthService {
     });
   }
 
-  isAuthenticated(): Observable<boolean> {
-    return this.fireAuth.user.pipe(
-      last(),
-      startWith(null),
-      map(user => {
-        return !!user;
-      }));
+  isAuthenticated(): boolean {
+    return !!this.fireAuth.auth.currentUser;
   }
 }
