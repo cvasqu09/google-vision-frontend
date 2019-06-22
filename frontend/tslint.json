@@ -72,6 +72,7 @@
     "component-class-suffix": true,
     "directive-class-suffix": true,
     "whitespace": [true, "check-module", "check-typecast", "check-preblock"],
-    "no-unused-variable": true
+    "no-unused-variable": true,
+    "no-unused-imports": true
   }
 }

@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { last, map, startWith, takeLast } from 'rxjs/operators';
-import { Observable } from 'rxjs';
 import { NotificationService } from '../../../shared/services/notification.service';
 
 @Injectable({
@@ -10,7 +8,8 @@ import { NotificationService } from '../../../shared/services/notification.servi
 })
 export class AuthService {
 
-  constructor(private fireAuth: AngularFireAuth, private notificationService: NotificationService, private router: Router) { }
+  constructor(private fireAuth: AngularFireAuth, private notificationService: NotificationService, private router: Router) {
+  }
 
   login(email: string, password: string) {
     this.fireAuth.auth.signInWithEmailAndPassword(email, password)
