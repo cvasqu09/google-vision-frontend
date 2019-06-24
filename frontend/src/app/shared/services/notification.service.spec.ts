@@ -1,12 +1,21 @@
-import { TestBed } from '@angular/core/testing';
-
 import { NotificationService } from './notification.service';
+import { Observable } from 'rxjs';
 
 describe('NotificationService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  let notificationService: NotificationService;
+
+  beforeEach(() => {
+    notificationService = new NotificationService();
+  });
 
   it('should be created', () => {
-    const service: NotificationService = TestBed.get(NotificationService);
-    expect(service).toBeTruthy();
+    expect(notificationService).toBeTruthy();
+  });
+
+  it('should return the notifications subject as an observable',async () => {
+    notificationService.notify('test me');
+    const result: Observable<string> = notificationService.notifications();
+
+    expect(result).toBeTruthy();
   });
 });
