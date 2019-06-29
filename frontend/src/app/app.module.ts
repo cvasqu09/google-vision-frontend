@@ -9,11 +9,13 @@ import { LoginComponent } from './modules/login/pages/login/login.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NotificationBarComponent } from './shared/components/notification/notification-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    NotificationBarComponent,
   ],
   imports: [
     BrowserModule,

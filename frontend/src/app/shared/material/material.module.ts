@@ -12,7 +12,7 @@ import {
   MatTableModule,
   MatPaginatorModule,
   MatTabsModule,
-  MatSidenavModule
+  MatSidenavModule, MatSnackBarModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -30,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatTableModule,
     MatPaginatorModule,
     MatTabsModule,
+    MatSnackBarModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
   ],
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSnackBarModule,
     MatDividerModule,
     MatCardModule,
     MatListModule,
