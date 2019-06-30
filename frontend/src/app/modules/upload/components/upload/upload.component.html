@@ -7,7 +7,14 @@
                src="../../../../../assets/icons/screenshot.svg" alt="screenshot-img"/>
         </div>
       </div>
-      <button mat-raised-button color="primary">Upload Screenshot</button>
+      <input class="ng-hide" id="input-file" type="file" (change)="detectFile($event)">
+      <div fxFlexLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Select a file">
+        </mat-form-field>
+        <mat-icon color="primary">attach_file</mat-icon>
+      </div>
+      <button mat-raised-button color="primary" (click)="uploadFile()">Upload Screenshot</button>
     </mat-card>
   </div>
   <div fxLayout="column" fxLayoutAlign="end">
