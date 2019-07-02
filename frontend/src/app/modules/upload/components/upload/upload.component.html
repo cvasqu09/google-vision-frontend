@@ -7,26 +7,31 @@
                src="../../../../../assets/icons/screenshot.svg" alt="screenshot-img"/>
         </div>
       </div>
-      <input class="ng-hide" id="input-file" type="file" (change)="detectFile($event)">
-      <div fxFlexLayout="column">
-        <mat-form-field>
-          <input matInput placeholder="Select a file">
-        </mat-form-field>
-        <mat-icon color="primary">attach_file</mat-icon>
-      </div>
-      <button mat-raised-button color="primary" (click)="uploadFile()">Upload Screenshot</button>
-    </mat-card>
-  </div>
-  <div fxLayout="column" fxLayoutAlign="end">
-    <mat-card >
-      <div>
-        Icons made by
-        <a href="https://www.freepik.com/" title="Freepik">Freepik</a>
-        from
-        <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-        is licensed by
-        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>
+      <div></div>
+      <div fxLayout="column" fxLayoutGap="1rem">
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <input type="file" (change)="detectFile($event)" [hidden]="true" #inputFile>
+          <mat-form-field *ngIf="selectedFile">
+            <input matInput [disabled]="true" [placeholder]="selectedFile.name">
+            <mat-hint>Selected file</mat-hint>
+          </mat-form-field>
+          <button *ngIf="!selectedFile" mat-raised-button color="secondary" (click)="openFileSelection()">Select a File</button>
+          <mat-icon *ngIf="selectedFile" (click)="removeSelectedFile()" color="warn">not_interested</mat-icon>
+        </div>
+        <button mat-raised-button color="primary" (click)="uploadFile()" [disabled]="!selectedFile">Upload Screenshot</button>
       </div>
     </mat-card>
   </div>
+  <!--<div fxLayout="column" fxLayoutAlign="end">-->
+    <!--<mat-card >-->
+      <!--<div>-->
+        <!--Icons made by-->
+        <!--<a href="https://www.freepik.com/" title="Freepik">Freepik</a>-->
+        <!--from-->
+        <!--<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>-->
+        <!--is licensed by-->
+        <!--<a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>-->
+      <!--</div>-->
+    <!--</mat-card>-->
+  <!--</div>-->
 </mat-card>

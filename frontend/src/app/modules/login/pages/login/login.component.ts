@@ -11,13 +11,17 @@ import { environment } from '../../../../../environments/environment';
 export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
-    email: new FormControl(`${environment.email}`),
-    password: new FormControl(`${environment.password}`),
+    email: new FormControl(`${ environment.email }`),
+    password: new FormControl(`${ environment.password }`),
   });
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService) {
+  }
 
   ngOnInit() {
+    if (this.loginForm.controls['email'] && this.loginForm.controls['password']) {
+      this.login();
+    }
   }
 
   login() {
