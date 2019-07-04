@@ -12,7 +12,9 @@ export const environment = {
     storageBucket: 'budgeting-4466c.appspot.com',
     messagingSenderId: '862263957447',
     appId: '1:862263957447:web:044fff2be5185fb3'
-  }
+  },
+  email: '',
+  password: ''
 };
 
 /*

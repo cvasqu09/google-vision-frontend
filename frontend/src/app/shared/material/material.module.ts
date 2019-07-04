@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
   MatButtonModule,
-  MatInputModule,
-  MatFormFieldModule,
   MatCardModule,
-  MatToolbarModule,
-  MatListModule,
   MatDividerModule,
+  MatFormFieldModule,
   MatIconModule,
-  MatTableModule,
+  MatInputModule,
+  MatListModule,
   MatPaginatorModule,
+  MatSnackBarModule,
+  MatTableModule,
   MatTabsModule,
-  MatSidenavModule, MatSnackBarModule
+  MatToolbarModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
