@@ -12,12 +12,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NotificationBarComponent } from './shared/components/notification/notification-bar.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DeleteDialogComponent } from './shared/components/delete-dialog/delete-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NotificationBarComponent,
+    DeleteDialogComponent,
   ],
   imports: [
     BrowserModule,

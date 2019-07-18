@@ -1,0 +1,17 @@
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let item of items; let i = index">
+    <mat-expansion-panel-header>
+      File name:  <strong>{{ item.name }}</strong>
+    </mat-expansion-panel-header>
+    <mat-panel-description fxLayout="row" fxLayoutAlign="space-between center">
+      <img [src]="item.downloadURL" alt="screenshot-preview">
+      <div fxLayout="row" fxLayoutGap="1rem">
+        <button mat-raised-button color="primary">View</button>
+        <button mat-raised-button color="warn" (click)="showDeleteDialog(i)">
+          Delete
+          <mat-icon>delete_forever</mat-icon>
+        </button>
+      </div>
+    </mat-panel-description>
+  </mat-expansion-panel>
+</mat-accordion>

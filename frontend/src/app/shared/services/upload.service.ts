@@ -10,8 +10,8 @@ export class UploadService {
 
   async upload(upload: Upload) {
     this.fireStorage.storage.ref();
-    const testRef = this.fireStorage.storage.ref().child(`${upload.name}`);
-    return testRef.put(upload.file).then((snapshot) => {
+    const fileReference = this.fireStorage.storage.ref().child(`${upload.name}`);
+    return fileReference.put(upload.file).then((snapshot) => {
       this.notificationService.notify(`Successfully uploaded ${upload.name}`);
     }).catch((err) => {
       this.notificationService.notify(`Failed to upload ${upload.name}`);

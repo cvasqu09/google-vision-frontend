@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {
+  MatExpansionModule,
   MatButtonModule,
   MatCardModule,
   MatDividerModule,
@@ -12,13 +13,15 @@ import {
   MatSnackBarModule,
   MatTableModule,
   MatTabsModule,
-  MatToolbarModule
+  MatToolbarModule, MatDialogModule
 } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
   imports: [
+    MatDialogModule,
+    MatExpansionModule,
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
@@ -35,6 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FlexLayoutModule,
   ],
   exports: [
+    MatDialogModule,
+    MatExpansionModule,
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
@@ -53,4 +58,5 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [],
   bootstrap: []
 })
-export class MaterialModule {}
+export class MaterialModule {
+}
